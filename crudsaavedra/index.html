@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>General Venequian Motors</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="wrap-header-hero">
+        <header class="main-header">
+            <div class="header-wrap">
+                <div class="wrap-logo-header">
+                    <img class="logo-img" src="logo.png" alt="Logo de General Motors">
+                    <span class="logo-text">GENERAL MOTORS C.A</span>
+                </div>
+                <div class="wrap-nav-header">
+                    <nav class="nav-header">
+
+                        <ul class="main-menu">
+                            <li class="menu-item"><a href="#vehicleForm">Registrar</a></li>
+                            <li class="menu-item"><a href="#vehicleTable">Ver Tabla</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <form id="vehicleForm">
+            <h2>Datos del dueño</h2>
+            <div class="form-group">
+                <div class="inline-group">
+                    <label for="ownerName">Nombre:</label>
+                    <input type="text" id="ownerName" required>
+                </div>
+                <div class="inline-group">
+                    <label for="ownerLastname">Apellido:</label>
+                    <input type="text" id="ownerLastname" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="inline-group">
+                    <label for="ownerId">Cédula:</label>
+                    <input type="number" id="ownerId" required>
+                </div>
+                <div class="inline-group">
+                    <label for="ownerPhone">Teléfono:</label>
+                    <input type="number" id="ownerPhone" required>
+                </div>
+            </div>
+            
+            <label for="ownerAddress">Dirección: <input type="text" id="ownerAddress" required></label><br>
+
+            <h2>Datos del vehículo</h2>
+            <div class="form-group">
+                <div class="inline-group">
+                    <label for="vehiclePlate">Placa:</label>
+                    <input type="text" id="vehiclePlate" required>
+                </div>
+                <div class="inline-group">
+                    <label for="vehicleYear">Año del vehículo:</label>
+                    <input type="number" id="vehicleYear" min="2000" max="2024" required>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <div class="inline-group">
+                    <label for="vehicleBrand">Brand:</label>
+                    <select id="vehicleBrand" required>
+                        <option value="">Select a brand</option>
+                        <option value="Brand1">Marca1</option>
+                        <option value="Brand2">Marca2</option>
+                        <option value="Brand3">Marca3</option>
+                        <option value="Brand4">Marca4</option>
+                        <option value="Brand5">Marca5</option>
+                    </select>
+                </div>
+                <div class="inline-group">
+                    <label for="vehicleModel">Model:</label>
+                    <select id="vehicleModel" required>
+                        <option value="">Select a model</option>
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+
+
+            
+            
+            <div class="form-group">
+                <div class="inline-group">
+                    <label for="vehicleColor">Color:</label>
+                    <input type="color" id="vehicleColor" required>
+                </div>
+                <div class="inline-group">
+                    <label for="vehiclePic">Foto:</label>
+                    <input type="url" id="vehiclePic" required>
+                </div>
+            </div>
+            <input type="submit" id="submitBtn" value="Registrar">
+            <button type="button" id="editBtn" style="display: none;">Guardar Edición</button>
+        </form>
+        <table id="vehicleTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cédula</th>
+                    <th>Placa</th>
+                    <th>Color</th>
+                    <th>Miniatura foto</th>
+                    <th>Acciones</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="vehicleTbody">
+            </tbody>
+        </table>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Detalles del Vehículo</h2>
+                <div id="detailsContent"></div>
+            </div>
+
+    </div>
+    
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
